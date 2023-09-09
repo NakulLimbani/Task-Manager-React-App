@@ -1,38 +1,123 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #252525; /* Dark Gray */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff; /* Text color changed to white for contrast */
+}
+
 .App {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #333; /* Slightly Darker Gray */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styles */
+header {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 40px; /* Larger font size for a bold title */
+  color: #ff6b6b; /* Reddish */
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form Styles */
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px; /* Increased gap for better spacing */
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"] {
+  padding: 15px;
+  border: none; /* Removed border for a cleaner look */
+  border-radius: 10px;
+  font-size: 18px; /* Larger font size for better readability */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button[type="submit"] {
+  background-color: #3498db; /* Light Blue */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9; /* Darker Blue */
+}
+
+/* Task Styles */
+.task {
+  background-color: #444; /* Darker Gray */
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increased shadow for depth */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row; /* Changed to row layout */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Center vertically */
+  transition: transform 0.2s ease-in-out;
+}
+
+.task:hover {
+  transform: translateY(-5px);
+}
+
+.task-number {
+  font-size: 24px; /* Larger font size for task numbering */
+  font-weight: 600;
+  color: #ff6b6b; /* Reddish */
+}
+
+.task-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.task-description {
+  font-size: 18px;
+  color: #ddd; /* Light Gray for description */
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px; /* Increased gap between buttons */
+}
+
+.complete-button,
+.delete-button {
+  background-color: #e74c3c; /* Red */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px; /* Larger button padding */
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.complete-button:hover,
+.delete-button:hover {
+  background-color: #c0392b; /* Darker Red */
 }
